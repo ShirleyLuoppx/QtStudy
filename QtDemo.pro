@@ -28,11 +28,13 @@ CONFIG += c++11
 #要编译的源文件列表
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+        mywindow.cpp
 
 #要编译的头文件列表
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+        mywindow.h
 
 #要编译的ui文件列表
 FORMS += \

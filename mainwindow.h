@@ -25,6 +25,9 @@ public:
     //头文件中定义函数
    void testPushButton();
 
+private slots:
+    void on_myPushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
