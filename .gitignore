@@ -9,4 +9,9 @@ Makefile
 ui_*.h
 qrc_*.cpp
 
+*.Debug
+*.Release
+
+debug/*
+
 QtDemo

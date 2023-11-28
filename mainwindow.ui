@@ -78,7 +78,6 @@
    <font>
     <family>Arial Black</family>
     <pointsize>13</pointsize>
-    <weight>75</weight>
     <italic>true</italic>
     <bold>true</bold>
    </font>
@@ -93,6 +92,9 @@
       <property name="font">
        <font>
         <family>Cascadia Mono SemiBold</family>
+        <pointsize>13</pointsize>
+        <italic>true</italic>
+        <bold>true</bold>
        </font>
       </property>
       <property name="text">
