@@ -79,7 +79,13 @@ int main(int argc, char *argv[])
     QStringTest();
 
     QApplication a(argc, argv);
+
+    // QApplication::processEvents();
+
+    //.ui文件，通过拖动控件生成ui，mainwindow.h 头文件声明类和函数，mainwindow.cpp 源文件引用.ui编译生成的.h文件和mainwindow.h头文件，并实现mainwindow.h中定义的函数，最终在main.cpp中通过.show()展示ui
+    //展示窗口
     MainWindow w;
+    w.testPushButton();
     w.show();
 
     return a.exec();

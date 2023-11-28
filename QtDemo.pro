@@ -4,9 +4,12 @@
 #
 #-------------------------------------------------
 
+#引入Qt的模块，core gui
 QT       += core gui widgets
 
+#生成最终文件的文件名，可执行文件exe
 TARGET = QtDemo
+#项目类型，生成什么类型的文件，可执行程序还是库文件
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -22,13 +25,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 CONFIG += c++11
 
+#要编译的源文件列表
 SOURCES += \
         main.cpp \
         mainwindow.cpp
 
+#要编译的头文件列表
 HEADERS += \
         mainwindow.h
 
+#要编译的ui文件列表
 FORMS += \
         mainwindow.ui
 
