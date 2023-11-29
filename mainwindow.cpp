@@ -1,6 +1,7 @@
 #include "mainwindow.h"     //引用定义类和函数的头文件
 #include "ui_mainwindow.h"  //引用名为mainwindow的ui文件生成的头文件
 //.cpp 文件引用头文件，实现在头文件中定义好的函数
+//在.ui界面的时候右键MainWindow可以选择添加工具栏、菜单栏，可以给状态栏添加子选项
 
 #include <QPushButton>
 
@@ -29,7 +30,7 @@ void MainWindow::testPushButton(){
     qPushBtn->setParent(this);
     qPushBtn->setText("this is a QPushButton ..");
     // qPushBtn->setContentsMargins(230,0,0,0);//这个没得效果
-    qPushBtn->move(1,1);//设置move值太大了可能会导致看不到内容
+    qPushBtn->move(1,100);//设置move值太大了可能会导致看不到内容
     qPushBtn->setStyleSheet("color: red; font-size: 20px;");
 
     //修改窗口的标题
