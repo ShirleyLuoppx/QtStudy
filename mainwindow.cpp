@@ -2,9 +2,9 @@
 #include "ui_mainwindow.h"  //引用名为mainwindow的ui文件生成的头文件
 //.cpp 文件引用头文件，实现在头文件中定义好的函数
 //在.ui界面的时候右键MainWindow可以选择添加工具栏、菜单栏，可以给状态栏添加子选项
-
+//.ui设计界面修改编译后，会生成一个ui_mainwindow.h文件，里面就是QtCreateor给我们生成的对应mainwindow.ui文件的界面代码
 #include <QPushButton>
-
+#include <QDebug>
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -57,5 +57,11 @@ void MainWindow::testPushButton(){
 void MainWindow::on_myPushButton_clicked()
 {
     ui->myPushButton->setText("create a slot by QtCreator");
+}
+
+
+void MainWindow::on_myPushButton_pressed()
+{
+    qDebug()<<"click myPushButton";
 }
 

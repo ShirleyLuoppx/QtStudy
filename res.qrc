@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/images">
+        <file alias="alias01">C:/Users/qc267/Desktop/1701227828415.jpg</file>
+        <file alias="alias02">C:/Users/qc267/Desktop/1701228103348.jpg</file>
+    </qresource>
+    <qresource prefix="/"/>
+</RCC>
