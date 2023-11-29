@@ -7,6 +7,8 @@
 #include <QDebug>
 #include <QDialog>
 #include <QMessageBox>
+#include <QTextEdit>
+#include <QAction>
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -17,6 +19,12 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     //构造函数中调用函数
     testPushButton();
+    // testQIcon();
+
+    // testQFileDialog();
+
+    // this->setWindowIcon(QIcon("/images/icon.jpg"));
+    setWindowIcon(QIcon(QApplication::applicationDirPath() + "icon.jpg"));
 }
 
 MainWindow::~MainWindow()
@@ -156,4 +164,60 @@ void MainWindow::on_showInfoIconQMsgBox_clicked()
     QMessageBox* infoWithIcon = new QMessageBox();
     infoWithIcon->information(this,"infomationTitle","information text ...");
 }
+
+
+void MainWindow:: testQIcon(){
+    QIcon qIcon = QIcon(":/images/icon.jpg");
+
+    QPushButton* qBtn = new QPushButton();
+    qBtn->setIcon(qIcon);
+    // qBtn->show();
+    // qBtn->move(480,100);
+
+}
+
+/**
+ * @brief MainWindow::testQFileDialog
+ * 文件管理器dialog
+ */
+void MainWindow::testQFileDialog(){
+    QAction*  openAction = new QAction(QIcon(":/images/icon"),tr("&Open..."), this);
+    openAction->setStatusTip(tr("Open an existing file"));
+    QAction*  saveAction = new QAction(QIcon(":/images/alias01"), tr("&Save..."), this);
+    saveAction->setStatusTip(tr("Save a new file"));
+    QMenu *file = menuBar()->addMenu(tr("&File"));
+    file->addAction(openAction);
+    file->addAction(saveAction);
+
+    QToolBar *toolBar = addToolBar(tr("&File"));
+    toolBar->addAction(openAction);
+    toolBar->addAction(saveAction);
+
+
+    QTextEdit* textEdit = new QTextEdit(this);
+    setCentralWidget(textEdit);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

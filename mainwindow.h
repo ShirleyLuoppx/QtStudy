@@ -25,6 +25,8 @@ public:
     //头文件中定义函数
     void testPushButton();
     void testQDialog();
+    void testQIcon();
+    void testQFileDialog();
 
 private slots:
     void on_myPushButton_clicked();
