@@ -23,12 +23,25 @@ public:
     ~MainWindow();
 
     //头文件中定义函数
-   void testPushButton();
+    void testPushButton();
+    void testQDialog();
 
 private slots:
     void on_myPushButton_clicked();
 
     void on_myPushButton_pressed();
+
+    void on_showDialogPushButton_clicked();
+
+    void on_showMyQMsgBox_clicked();
+
+    void on_showInfoQMsgBox_clicked();
+
+    void on_showQtQMsgBox_clicked();
+
+    void on_showErrQMsgBox_clicked();
+
+    void on_showInfoIconQMsgBox_clicked();
 
 private:
     Ui::MainWindow *ui;

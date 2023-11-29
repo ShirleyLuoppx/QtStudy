@@ -16,9 +16,9 @@
      <colorrole role="WindowText">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>255</red>
+        <red>85</red>
         <green>85</green>
-        <blue>0</blue>
+        <blue>127</blue>
        </color>
       </brush>
      </colorrole>
@@ -26,8 +26,8 @@
       <brush brushstyle="SolidPattern">
        <color alpha="255">
         <red>255</red>
-        <green>85</green>
-        <blue>0</blue>
+        <green>193</green>
+        <blue>225</blue>
        </color>
       </brush>
      </colorrole>
@@ -36,9 +36,9 @@
      <colorrole role="WindowText">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>255</red>
+        <red>85</red>
         <green>85</green>
-        <blue>0</blue>
+        <blue>127</blue>
        </color>
       </brush>
      </colorrole>
@@ -46,8 +46,8 @@
       <brush brushstyle="SolidPattern">
        <color alpha="255">
         <red>255</red>
-        <green>85</green>
-        <blue>0</blue>
+        <green>193</green>
+        <blue>225</blue>
        </color>
       </brush>
      </colorrole>
@@ -89,9 +89,9 @@
    <widget class="QLabel" name="mylabel">
     <property name="geometry">
      <rect>
-      <x>707</x>
-      <y>9</y>
-      <width>200</width>
+      <x>100</x>
+      <y>20</y>
+      <width>241</width>
       <height>20</height>
      </rect>
     </property>
@@ -112,12 +112,98 @@
      <rect>
       <x>0</x>
       <y>180</y>
-      <width>211</width>
+      <width>301</width>
       <height>41</height>
      </rect>
     </property>
     <property name="text">
      <string>PushButton</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="showDialogPushButton">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>140</y>
+      <width>301</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ShowQDialog</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="showMyQMsgBox">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>10</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>QMsgDialog</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="showInfoQMsgBox">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>60</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>QMsgInfoDlg</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="showQtQMsgBox">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>110</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>QMsgQtDlg</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="showErrQMsgBox">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>160</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>QMsgErrDlg</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="showInfoIconQMsgBox">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>10</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>10</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>QMsgInfoIconBox</string>
     </property>
    </widget>
   </widget>
@@ -191,12 +277,6 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
-  </widget>
-  <widget class="QDockWidget" name="dockWidget">
-   <attribute name="dockWidgetArea">
-    <number>1</number>
-   </attribute>
-   <widget class="QWidget" name="dockWidgetContents"/>
   </widget>
   <action name="action1">
    <property name="text">
@@ -277,22 +357,5 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
- <connections>
-  <connection>
-   <sender>myPushButton</sender>
-   <signal>pressed()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>close()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>196</x>
-     <y>242</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>470</x>
-     <y>148</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>
