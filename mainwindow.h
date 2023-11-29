@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <dialog.h>
 
 // .h头文件定义类，声明函数和变量
 
@@ -44,6 +45,8 @@ private slots:
     void on_showErrQMsgBox_clicked();
 
     void on_showInfoIconQMsgBox_clicked();
+
+    void on_pushButton_2_clicked();
 
 private:
     Ui::MainWindow *ui;

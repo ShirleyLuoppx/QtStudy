@@ -10,6 +10,8 @@
 #include <QTextEdit>
 #include <QAction>
 
+//看看其他项目的多界面是如何跳转的
+
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -198,26 +200,9 @@ void MainWindow::testQFileDialog(){
     setCentralWidget(textEdit);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+void MainWindow::on_pushButton_2_clicked()
+{
+    Dialog d ;
+    d.exec();
+}
 
