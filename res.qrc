@@ -1,8 +1,9 @@
 <RCC>
     <qresource prefix="/images">
-        <file alias="alias01">C:/Users/qc267/Desktop/1701227828415.jpg</file>
-        <file alias="alias02">C:/Users/qc267/Desktop/1701228103348.jpg</file>
-        <file alias="icon">C:/Users/qc267/Desktop/1701244730284.jpg</file>
+        <file alias="alias01">C:/Users/qc267/Pictures/Saved Pictures/eyes.jpg</file>
+        <file alias="alias02">C:/Users/qc267/Pictures/Saved Pictures/mby.jpg</file>
+        <file alias="icon">C:/Users/qc267/Pictures/Saved Pictures/smile.jpg</file>
+        <file alias="alias03">C:/Users/qc267/Pictures/Saved Pictures/xiaojiang.png</file>
     </qresource>
     <qresource prefix="/"/>
 </RCC>

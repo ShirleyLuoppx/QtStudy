@@ -9,6 +9,7 @@
 #include <QMessageBox>
 #include <QTextEdit>
 #include <QAction>
+#include <QVBoxLayout>
 
 //看看其他项目的多界面是如何跳转的
 
@@ -27,6 +28,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // this->setWindowIcon(QIcon("/images/icon.jpg"));
     setWindowIcon(QIcon(QApplication::applicationDirPath() + "icon.jpg"));
+
+
+    testQLabel();
 }
 
 MainWindow::~MainWindow()
@@ -206,3 +210,14 @@ void MainWindow::on_pushButton_2_clicked()
     d.exec();
 }
 
+
+/**
+ * @brief MainWindow::testQLabel
+ * 常用的Qt控件之一：QLabel：可以显示文字，可以添加html，可以显示图片，可以展示动画
+ */
+void MainWindow::testQLabel(){
+    QLabel* htmlLink = new QLabel(this);
+    htmlLink->setText("<h1><a href=\"https://www.baidu.com\">百度一下</a></h1>");
+    htmlLink->setOpenExternalLinks(true);
+    htmlLink->move(500,200);
+}

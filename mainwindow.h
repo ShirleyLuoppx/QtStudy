@@ -28,6 +28,7 @@ public:
     void testQDialog();
     void testQIcon();
     void testQFileDialog();
+    void testQLabel();
 
 private slots:
     void on_myPushButton_clicked();
