@@ -30,6 +30,10 @@ public:
     void testQFileDialog();
     void testQLabel();
 
+    //测试常量成员函数 const
+    void setConstValue(int v);
+    int getConstValue() const;
+
 private slots:
     void on_myPushButton_clicked();
 
@@ -48,9 +52,12 @@ private slots:
     void on_showInfoIconQMsgBox_clicked();
 
     void on_pushButton_2_clicked();
-
+    
+    void on_pushButton_clicked();
+    
 private:
     Ui::MainWindow *ui;
+    int constValue;
 };
 
 #endif // MAINWINDOW_H

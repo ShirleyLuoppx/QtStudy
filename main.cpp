@@ -2,6 +2,21 @@
   1、新建的项目，一般需要把，项目-Shadow Build这个复选框取消掉，要不然在项目路径下找不到 编译后生成的可执行文件
   2、构建项目之前一般先清理一下项目
   3、如果是用的515版本就可以直接在电脑上运行，会有一个窗口弹出来
+
+--------------------------uint8_t start-------------------------------------------
+uint8_t：无符号8位整数类型，其中的u表示unsigned-无符号，int就是整数，t表示type-类型，所以就是无符号8位整数类型，取值范围是 [0~2^8-1]=[0-255]，是c++标准库<cstdint>中定义的类型；
+
+<cstdint>标准库中还定义了其他的几个类型：
+
+int8_t：有符号8位整数类型，依旧是一共有2^8=256个取值，取值范围有符号，包含正负数，所以是：-128~127，正数+0和负数各一半
+uint16_t：无符号16位整数类型
+int16_t：有符号16位整数类型
+uint32_t：无符号32位整数类型
+int32_t：有符号32位整数类型
+uint64_t：无符号64位整数类型
+int64_t：有符号64位整数类型
+--------------------------uint8_t end-------------------------------------------
+
 */
 
 //#include <iostream>
@@ -13,6 +28,7 @@
 #include <QMouseEvent>
 #include <QString>
 #include <QWidget>
+#include <QStringList>
 
 void testQChar(){
     //qt中的控件都是叫做Qxxx的，QT中的字符串就是QString，里面存储的都是一个个的QChar，可以使用[]或者at来获取指定索引的内容
@@ -122,6 +138,46 @@ void EventLabel::mouseReleaseEvent(QMouseEvent *event){
 //     return QWidget::event(e);
 // }
 
+void MainWindow::setConstValue(int value){
+    constValue = value;
+    constValue = 1;
+}
+
+int MainWindow::getConstValue() const{
+    return constValue;
+}
+
+/**
+ * @brief testQStringList QStringList例子，见名知意，就是一个装QString类型的list集合
+ */
+void testQStringList(){
+    //初始化一个QStringList
+    QStringList qStringList = {"test","aaa","bbb","ccc"};
+    //遍历集合
+    for (int i = 0; i < qStringList.size(); ++i) {
+        //数组方式
+        qDebug()<<"qStringList[" << i <<"] = "<<qStringList[i];
+        //列表方式
+        qDebug()<<"qStringList["<<i<<"] = "<<qStringList.at(i);
+    }
+
+    qDebug()<<"---------------------------";
+
+    //迭代器方式
+    QStringListIterator iterator(qStringList);
+    while(iterator.hasNext()){
+        qDebug()<<"QStringListIterator content is " << iterator.next();
+    }
+
+    qDebug()<<"---------------------------";
+
+    //一种很新的添加集合内容的方式  list<<"content"
+    qStringList << "ddd";
+    for (int i = 0; i < qStringList.size(); ++i) {
+        qDebug()<<qStringList[i];
+    }
+}
+
 int main(int argc, char *argv[])
 {
     //ui显示跟实际车机窗口显示不一致，有时候车机显示不完全。 添加这句话，就可以让窗口显示跟ui显示的一致。
@@ -147,6 +203,12 @@ int main(int argc, char *argv[])
     label->resize(300, 200);
     label->show();
 
+    MainWindow mainWindow;
+    mainWindow.setConstValue(10086);
+    int r = mainWindow.getConstValue();
+    qDebug()<<"getConstValue = "<< r;
+
+    testQStringList();
 
     return a.exec();
 }

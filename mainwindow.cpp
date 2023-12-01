@@ -14,6 +14,8 @@
 //看看其他项目的多界面是如何跳转的
 
 
+//MainWindow的构造函数中冒号后面的内容表示初始化
+//比如说这里：    QMainWindow(parent),ui(new Ui::MainWindow)，就是初始化QMainWindow和ui
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -221,3 +223,4 @@ void MainWindow::testQLabel(){
     htmlLink->setOpenExternalLinks(true);
     htmlLink->move(500,200);
 }
+
