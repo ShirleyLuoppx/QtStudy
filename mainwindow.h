@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <dialog.h>
+#include <form.h>
 
 // .h头文件定义类，声明函数和变量
 
@@ -34,6 +35,8 @@ public:
     void setConstValue(int v);
     int getConstValue() const;
 
+    void lineEditTest();
+
 private slots:
     void on_myPushButton_clicked();
 
@@ -53,9 +56,13 @@ private slots:
 
     void on_pushButton_2_clicked();
     
+    void on_btn_newpage_clicked();
+
 private:
     Ui::MainWindow *ui;
     int constValue;
+
+    Form* form = nullptr;
 };
 
 #endif // MAINWINDOW_H

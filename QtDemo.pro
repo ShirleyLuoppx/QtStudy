@@ -28,6 +28,7 @@ CONFIG += c++11
 #要编译的源文件列表
 SOURCES += \
         dialog.cpp \
+        form.cpp \
         main.cpp \
         mainwindow.cpp \
         mytest.cpp
@@ -35,12 +36,14 @@ SOURCES += \
 #要编译的头文件列表
 HEADERS += \
         dialog.h \
+        form.h \
         mainwindow.h \
         mytest.h
 
 #要编译的ui文件列表
 FORMS += \
         dialog.ui \
+        form.ui \
         mainwindow.ui
 
 # Default rules for deployment.

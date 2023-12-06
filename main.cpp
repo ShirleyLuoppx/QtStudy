@@ -21,7 +21,8 @@ int64_t：有符号64位整数类型
 
 单走一个F4切换.h和.cpp；
 光标在变量位置F2可以切换到变量声明和定义的地方；光标在函数的位置，可以在声明函数和函数实现之间切换；
-Ctrl+B 编译
+Ctrl+B 编译;
+光标选中qt源码里面的函数，按F1可以在qtCreator右侧展开对应的源码函数的英文文档
 
 
 */
@@ -36,6 +37,8 @@ Ctrl+B 编译
 #include <QString>
 #include <QWidget>
 #include <QStringList>
+#include <QVBoxLayout>
+#include <QLineEdit>
 
 #include "mytest.h"
 
@@ -195,6 +198,11 @@ void testQuatFun(int* x,int* y){
     qDebug()<<"after swap the x and y = "<<x<<"，"<<y;
 }
 
+
+void showSencondView(){
+
+}
+
 int main(int argc, char *argv[])
 {
     //ui显示跟实际车机窗口显示不一致，有时候车机显示不完全。 添加这句话，就可以让窗口显示跟ui显示的一致。
@@ -214,11 +222,12 @@ int main(int argc, char *argv[])
     w.testPushButton();
     w.show();
 
+    //追踪鼠标的x.y坐标值
     EventLabel *label = new EventLabel;
     label->setMouseTracking(true);//设置一开始就追踪鼠标，这个值默认false：点击一下之后才开始追踪鼠标
     label->setWindowTitle("MouseEvent Demo");
     label->resize(300, 200);
-    label->show();
+    // label->show();
 
     MainWindow mainWindow;
     mainWindow.setConstValue(10086);
@@ -237,6 +246,9 @@ int main(int argc, char *argv[])
     int myNumA = 2;
     int myNumB  = 8;
     testQuatFun(&myNumA,&myNumB);
+
+    showSencondView();
+
 
     return a.exec();
 }

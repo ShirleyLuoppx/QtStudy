@@ -10,6 +10,9 @@
 #include <QTextEdit>
 #include <QAction>
 #include <QVBoxLayout>
+#include <QLineEdit>
+#include "form.h"
+#include "ui_form.h"
 
 //看看其他项目的多界面是如何跳转的
 
@@ -33,6 +36,14 @@ MainWindow::MainWindow(QWidget *parent) :
 
 
     testQLabel();
+
+    QWidget window;
+    QVBoxLayout layout(&window);
+
+    // 创建 QLineEdit 组件
+    QLineEdit lineEdit;
+    lineEdit.setText("11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111");
+    layout.addWidget(&lineEdit);
 }
 
 MainWindow::~MainWindow()
@@ -54,9 +65,9 @@ void MainWindow::testPushButton(){
     //修改窗口的标题
     this->setWindowTitle("QPushBottonTitle");
     //设置窗口大小，仅是这样设置了之后，窗口还是能拖动大小
-    this->resize(1600,300);
+    // this->resize(1600,300);
     //限制窗口大小，设置了之后就无法拖动修改窗口的大小了
-    this->setFixedSize(1600,300);
+    // this->setFixedSize(1600,300);
 
 
     //创建一个QPushButton,构造方法直接传参给button的内容和parent父窗口
@@ -208,6 +219,7 @@ void MainWindow::testQFileDialog(){
 
 void MainWindow::on_pushButton_2_clicked()
 {
+    //点击弹出登录框
     Dialog d ;
     d.exec();
 }
@@ -222,5 +234,22 @@ void MainWindow::testQLabel(){
     htmlLink->setText("<h1><a href=\"https://www.baidu.com\">百度一下</a></h1>");
     htmlLink->setOpenExternalLinks(true);
     htmlLink->move(500,200);
+}
+
+void MainWindow::lineEditTest(){
+    QLineEdit* qlineEdit = new QLineEdit();
+    qlineEdit->setParent(this);
+    qlineEdit->setText("this is a QLineEdit ");
+    qlineEdit->setFixedSize(100,100);
+    qlineEdit->move(100,100);
+    // qlineEdit->show();
+}
+
+//跳转到新的页面
+void MainWindow::on_btn_newpage_clicked()
+{
+    //点击mainwindow的按钮就可以直接跳转到Form界面
+    form = new Form(this);
+    form->showFullScreen();
 }
 
